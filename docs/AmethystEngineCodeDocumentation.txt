@@ -1,0 +1,96 @@
+AMETHYST ENGINE CODE DOCUMENTATION
+
+This file is to document the various coding styles and normalizations of
+	coding styles to be used when developing the Amethyst Engine.
+
+Classes
+Structs
+Functions
+Variables (SUB-DIVIDED)
+	Containers (1)
+		vectors = vec_
+		maps = map_
+		queue = que_
+	Pointers
+		pointers = p
+
+
+
+Loop Counters
+
+Declaration Headers
+
+Pattern Declarations
+
+Documentation of Work
+	This document should outline everything added when working on the project, this does
+	not need to be complicated, simply place in a text file the following:
+		Any Modifications/Additions/Deletions, etc. to the following:
+			Classes, Structs, Functions, Variables, etc.
+	This way we know exactly what was touched when doing a code review before pushing
+		to the next enviornment.
+
+Code Reviews
+	These are manditory before promoting code to the next enviornment, all must make sure
+	nothing they worked on touches anything they did or have done, this should avoid
+	regression and bugs showing up mostly, some will get through but lets try to keep
+	them to a minimum.
+	
+	Code Reviews are to be done by the individual whom wrote the section of code or
+	recently worked on a section of code.
+
+	These will also allow us to make sure code is written to the standard which was agreed
+	upon.
+
+Promotions
+	Development (DEV):
+	Development enviornment is the base enviornment with which all code is written in,
+	developers are expected to do initial testing of their code in this enviornment
+	before initiating a code review and moving the code base to the next enviornment.
+
+	Testing (QAT -> UAT):
+	Testing enviornment is the second phase of development where the code will be more
+	rigorously tested ideally this should be divided into two parts
+	the first one being:
+		Quality Assurance Testing (QAT)
+	the second being:
+		User Acceptance Testing (UAT)
+	of these the quality assurance will be more like Alpha testing, this is an internal
+	indepth testing of the code, where user acceptance will be more like Beta testing where
+	external users will test the code to verify it is working correctly or to catch stuff
+	we may miss as programmers.
+	
+	As we are unable to do proper testing, the enviornment is simply the test environment
+	which we will rigourously test the code before moving it into release (production).
+
+	Release (PROD):
+	Release is the final enviornment and the one that would be "live" on servers and readily
+	used, code on this enviornment should never be touched.
+	Release promotes to the master file if no issues are found within a certain time frame
+	like to be one month.
+	
+	master (MST):
+	master is the primary code base from the product and should never be touched except when
+	accepting code from the Release environment; this would also be used as a copy of the
+	ideal working state of the code should someone need a fresh copy of the code, however
+	all changes should be set up to go to and from Development initially, to clone the master
+	would be an odd thing to do however not unreasonable in rare specific instances.
+
+GIT COMMANDS TO USE FOR CODE
+FORCE LIBS
+	git add --force Libs
+
+CHANGE BRANCH
+	git checkout branchnamehere
+
+CODE PROMOTIONS
+	git push origin sourcebranch:targetbranch
+
+CHANGELOG	
+	14/08/2019
+		Created cFirstPersonCamera class to create a freefloating camera with better controls.
+		Empty interface files and cThirdPersonCamera for later use.
+		Added Camera and deltatime variables to Globals.hpp.
+		Modified key_callback(), cursor_position_callback()), and main().
+
+END OF CODE DOCUMENTATION

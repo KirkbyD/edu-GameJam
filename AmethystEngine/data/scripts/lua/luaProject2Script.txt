@@ -1,0 +1,122 @@
+animascript(
+	"P2Script",
+	pgcmd(
+		moveto(
+			setsubsystem("models"),
+			settarget("Fighter"),
+			setendposition(3, 2800.0, 2300.0, 1800.0),
+			setduration(10.0),
+			seteaseinout("D", 0.15, 0.10)
+		),
+		rotateto(
+			setsubsystem("models"),
+			settarget("Fighter"),
+			setendorientation(90.0, 45.0, 135.0),
+			setduration(5.0),
+			seteaseinout("T", 3.0, 1.0)
+		)
+	),
+	sgcmd(
+		moveto(
+			setsubsystem("models"),
+			settarget("Fighter"),
+			setendposition(3, 2500.0, 2000.0, 1500.0),
+			setduration(10.0)
+		),
+		rotateto(
+			setsubsystem("models"),
+			settarget("Fighter"),
+			setendorientation(90.0, 45.0, 135.0),
+			setduration(5.0)
+		)
+	)
+);
+animascript(
+	"P2ScriptSerialParallel",
+	sgcmd(
+		pgcmd(
+			followcurve(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setcontrolpoint(2400.0, 1950.0, 1300.0),
+				setendpospoints(1, 2250.0, 1750.0, 1250.0),
+				setduration(10.0),
+				seteaseinout("D", 15.0, 10.0)
+			),
+			rotateto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendorientation(45.0, 135.0, 90.0),
+				setduration(5.0)
+			)
+		),
+		sgcmd(
+			moveto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendposition(3, 2250.0, 1750.0, 1250.0),
+				setduration(10.0)
+			)
+		)
+	)
+);
+animascript(
+	"P2ScriptParallelSerial",
+	pgcmd (
+		sgcmd(
+			moveto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendposition(3, 1800.0, 1300.0, 800.0),
+				setduration(10.0)
+			),
+			rotateto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendorientation(50.0, 100.0, 150.0),
+				setduration(5.0)
+			)
+		),
+		sgcmd(
+			rotateto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendorientation(0.0, 0.0, 0.0),
+				setduration(5.0)
+			),
+			moveto(
+				setsubsystem("models"),
+				settarget("Fighter"),
+				setendposition(3, 1500.0, 1000.0, 500.0),
+				setduration(10.0)
+			)
+		)
+	)
+);
+animascript(
+	"P2Trigger",
+	sgcmd(
+		trigger(
+			moveto(
+				setsubsystem("models"),
+				settarget("DESTROY"),
+				setendposition(3, 150.0, 100.0, 50.0),
+				setduration(5.0),
+				seteaseinout("D", 0.15, 0.10)
+			),
+			followobject(
+				setsubsystem("models"),
+				setsourcesubsystem("models"),
+				settarget("DESTROY"),
+				setsource("Fighter"),
+				setduration(1000.0),
+				setspeed(10.0),
+				setradi(1.0, 150.0),
+				setoffset(15.0, 10.0, 5.0)
+			),
+			settriggerobjects(1, "Fighter"),
+			settriggerpoint(1500.0, 1000.0, 500.0),
+			setradius(50.0)
+		)
+	)
+);

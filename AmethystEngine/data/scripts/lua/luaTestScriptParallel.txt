@@ -1,0 +1,16 @@
+pgcmd(
+	moveto(
+		setsubsystem("models"),
+		settarget("DESTROY"),
+		setendposition(4, 1650.0, 900.0, 1150.0, 1.0),
+		setduration(50.0),
+		seteaseinout("D", 0.15, 0.10)
+	),
+	rotateto(
+		setsubsystem("models"),
+		settarget("DESTROY"),
+		setendorientation(90.0, 45.0, 135.0),
+		setduration(20.0),
+		seteaseinout("T", 2.0, 2.0)
+	)
+);

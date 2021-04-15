@@ -1,0 +1,383 @@
+{
+  "Entities": [
+    {
+      "Name": "Ground",
+      "Transform": {
+        "Position": "0.0f 0.0f 0.0f",
+        "Orientation": "0.0f 0.0f 0.f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Box",
+          "Position": "0.0f 0.0f 0.0f",
+          "HalfExtents": "256.0f 1.0f 256.0f",
+          "Mass": ".0f"
+        }
+      ],
+      "Graphics": [
+        {
+          "Name": "Ground",
+          "Mesh": "Quad",
+          "Texture": "GrassTerrain",
+          "Scale": "512.0f"
+        }
+      ]
+    },
+    {
+      "Name": "Death Plane",
+      "Transform": {
+        "Position": "0.0f -200.0f 0.0f",
+        "Orientation": "0.0f 0.0f 0.f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Plane",
+          "Position": "0.0f -200.0f 0.0f",
+          "Normal": "0.0f 1.0f 0.0f"
+        }
+      ]
+    },
+    {
+      "Name": "Health Potion",
+
+      "Transform": {
+        "Position": "150.0f 10.0f 100.0f",
+        "Orientation": "-90.0f 0.0f 0.f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Box",
+          "Position": "150.0f 10.0f 100.0f",
+          "HalfExtents": "3.f, 3.f, 7.f",
+          "Mass": "1.f"
+        }
+      ],
+      "Graphics": [
+        {
+          "Name": "Potion",
+          "Mesh": "Potion",
+          "Texture": "PotionRed",
+          "Scale": "3.0f"
+        }
+      ]
+    },
+    {
+      "Name": "Rocks",
+      "Transform": {
+        "Position": "0.0f 0.0f 0.0f",
+        "Orientation": "0.0f 75.0f 0.f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "TriangleMesh",
+          "Mesh": "Rocks",
+          "Position": "0.0f 20.0f -200.0f",
+          "Scale": "40.f, 40.f, 40.f"
+        }
+      ],
+      "Graphics": [
+        {
+          "Name": "Rocks",
+          "Mesh": "Rocks",
+          "Texture": "Rocks",
+          "Scale": "40.f"
+        }
+      ]
+    },
+    {
+      "Name": "Bonfire",
+      "Transform": {
+        "Position": "5.f 5.f -5.f",
+        "Orientation": "0.0f 0.0f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Capsule",
+          "Position": "0.0f 0.0f 100.0f",
+          "Height": "30.f",
+          "Radius": "5.f"
+        },
+        {
+          "Shape": "Box",
+          "Position": "0.0f 0.0f 100.0f",
+          "HalfExtents": "12.f, 3.f, 12.f"
+        }
+      ],
+      "Graphics": [
+        {
+          "Name": "Bonfire",
+          "Mesh": "Bonfire",
+          "Texture": "Bonfire",
+          "Scale": ".0625f"
+        }
+      ]
+    },
+    {
+      "Name": "Teapot",
+      "Transform": {
+        "Position": "5.f 5.f -5.f",
+        "Orientation": "0.0f 0.0f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Capsule",
+          "Position": "0.0f 10.0f 75.0f",
+          "Height": "30.f",
+          "Radius": "11.f"
+        }
+      ]
+    },
+    {
+      "Name": "BluePortal",
+      "Transform": {
+        "Position": "300.0f 50.0f 100.0f",
+        "Orientation": "0.0f 180.0f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Box",
+          "Position": "300.0f 50.0f 100.0f",
+          "HalfExtents": "1.f, 50.f, 50.f"
+        }
+      ]
+    },
+    {
+      "Name": "OrangePortal",
+      "Transform": {
+        "Position": "400.0f 50.0f -400.0f",
+        "Orientation": "0.0f -45.f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Box",
+          "Position": "400.0f 50.0f -400.0f",
+          "HalfExtents": "50.f, 50.f, 1.f"
+        }
+      ]
+    },
+    {
+      "Name": "Elf",
+      "Transform": {
+        "Position": "100.0f 0.f 100.0f",
+        "Orientation": "90.0f 0.0f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Character",
+          "Radius": "10.f",
+          "Height": "40.f",
+          "StepHeight": "5.f",
+          "Position": "100.0f 0.f 100.0f"
+        }
+      ],
+      "Anima": [
+        {
+          "Name": "Elf",
+          "File": "data/models/elf/chara_f_elf_bind_pose.fbx",
+          "Scale": "0.3",
+          "Textures": [
+            {
+              "Name": "ElfBody",
+              "//": "Body"
+            },
+            {
+              "Name": "ElfBottom",
+              "//": "??"
+            },
+            {
+              "Name": "ElfGloves",
+              "//": "??"
+            },
+            {
+              "Name": "ElfTop",
+              "//":  "top"
+            },
+            {
+              "Name": "ElfShoes",
+              "//": "shoes"
+            },
+            {
+              "Name": "ElfHair",
+              "//": "Hair"
+            }
+          ],
+          "Animations": [
+            {
+              "Name": "Idle",
+              "File": "data/models/elf/chara_f_elf_idle.fbx"
+            },
+            {
+              "Name": "WalkF",
+              "File": "data/models/elf/chara_f_elf_forward_walk.fbx"
+            },
+            {
+              "Name": "RunF",
+              "File": "data/models/elf/chara_f_elf_forward_run.fbx"
+            },
+            {
+              "Name": "WalkB",
+              "File": "data/models/elf/chara_f_elf_backwards_walk.fbx"
+            },
+            {
+              "Name": "RunB",
+              "File": "data/models/elf/chara_f_elf_backwards_run.fbx"
+            },
+            {
+              "Name": "WalkL",
+              "File": "data/models/elf/chara_f_elf_strafe_left_walk.fbx"
+            },
+            {
+              "Name": "RunL",
+              "File": "data/models/elf/chara_f_elf_strafe_left_run.fbx"
+            },
+            {
+              "Name": "WalkR",
+              "File": "data/models/elf/chara_f_elf_strafe_right_walk.fbx"
+            },
+            {
+              "Name": "RunR",
+              "File": "data/models/elf/chara_f_elf_strafe_right_run.fbx"
+            },
+            {
+              "Name": "JumpF",
+              "File": "data/models/elf/chara_f_elf_jump_forward.fbx"
+            },
+            {
+              "Name": "JumpB",
+              "File": "data/models/elf/chara_f_elf_jump_backward.fbx"
+            },
+            {
+              "Name": "TurnL",
+              "File": "data/models/elf/chara_f_elf_left_turn.fbx"
+            },
+            {
+              "Name": "TurnR",
+              "File": "data/models/elf/chara_f_elf_right_turn.fbx"
+            },
+            {
+              "Name": "IdleToFight",
+              "File": "data/models/elf/chara_f_elf_transition_idle_unarmed.fbx"
+            },
+            {
+              "Name": "FightToIdle",
+              "File": "data/models/elf/chara_f_elf_transition_unarmed_idle.fbx"
+            },
+            {
+              "Name": "Punch",
+              "File": "data/models/elf/chara_f_elf_unarmed_attack.fbx"
+            },
+            {
+              "Name": "FightIdle",
+              "File": "data/models/elf/chara_f_elf_unarmed_idle.fbx"
+            },
+            {
+              "Name": "DodgeL",
+              "File": "data/models/elf/chara_f_elf_standing_left_dodge.fbx"
+            },
+            {
+              "Name": "DodgeR",
+              "File": "data/models/elf/chara_f_elf_standing_right_dodge.fbx"
+            },
+            {
+              "Name": "Fall",
+              "File": "data/models/elf/Fall A Loop.fbx"
+            },
+            {
+              "Name": "Land",
+              "File": "data/models/elf/Falling To Landing.fbx"
+            },
+            {
+              "Name": "Death",
+              "File": "data/models/elf/Falling Back Death.fbx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Zombie",
+      "Transform": {
+        "Position": "-150.0f 0.f -150.0f",
+        "Orientation": "90.0f 0.0f 0.0f",
+        "Scale": "1.0f"
+      },
+      "Physics": [
+        {
+          "Shape": "Character",
+          "Radius": "10.f",
+          "Height": "40.f",
+          "StepHeight": "5.f",
+          "Position": "-150.0f 0.f -150.0f"
+        }
+      ],
+      "Anima": [
+        {
+          "Name": "Zombie",
+          "File": "data/models/Zombie/chara_zomb_bind_pose.fbx",
+          "Scale": "0.3",
+          "Textures": [
+            {
+              "Name": "ZomBody",
+              "//": "Body"
+            },
+            {
+              "Name": "ZomBottom",
+              "//": "??"
+            },
+            {
+              "Name": "ZomTop",
+              "//": "top"
+            },
+            {
+              "Name": "ZomShoes",
+              "//": "shoes"
+            },
+            {
+              "Name": "ZomHair",
+              "//": "Hair"
+            }
+          ],
+          "Animations": [
+            {
+              "Name": "Idle",
+              "File": "data/models/Zombie/chara_zomb_idle.fbx"
+            },
+            {
+              "Name": "WalkF",
+              "File": "data/models/Zombie/chara_zomb_walk_forward.fbx"
+            },
+            {
+              "Name": "TurnL",
+              "File": "data/models/Zombie/chara_zomb_turn_left.fbx"
+            },
+            {
+              "Name": "TurnR",
+              "File": "data/models/Zombie/chara_zomb_turn_right.fbx"
+            },
+            {
+              "Name": "Punch",
+              "File": "data/models/Zombie/chara_zomb_attack.fbx"
+            },
+            {
+              "Name": "Death",
+              "File": "data/models/Zombie/Zombie Death.fbx"
+            },
+            {
+              "Name": "Fall",
+              "File": "data/models/Zombie/Fall A Loop.fbx"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

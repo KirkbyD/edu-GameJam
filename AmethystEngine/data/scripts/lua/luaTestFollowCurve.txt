@@ -1,0 +1,8 @@
+followcurve(
+	setsubsystem("models"),
+	settarget("DESTROY"),
+	setcontrolpoint(300.0, 600.0, 450.0),
+	setendpospoints(1, 150.0, 100.0, 50.0),
+	setduration(20.0),
+	seteaseinout("D", 15.0, 10.0)
+);

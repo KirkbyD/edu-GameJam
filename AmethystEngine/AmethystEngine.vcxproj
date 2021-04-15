@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{56A665C0-A093-47BA-9E37-D8ACEF544D17}</ProjectGuid>
+    <RootNamespace>AmethystEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)exBuild/include;$(SolutionDir)inBuild/include;$(SolutionDir)Physics_Interfaces;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)exBuild/lib/$(PlatformShortName)/$(Configuration);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)exBuild/include;$(SolutionDir)inBuild/include;$(SolutionDir)Physics_Interfaces;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)exBuild/lib/$(PlatformShortName)/$(Configuration);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)exBuild/include;$(SolutionDir)inBuild/include;$(SolutionDir)Physics_Interfaces;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)exBuild/lib/$(PlatformShortName)/$(Configuration);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)exBuild/include;$(SolutionDir)inBuild/include;$(SolutionDir)Physics_Interfaces;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)exBuild/lib/$(PlatformShortName)/$(Configuration);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>lua5.3.5-static.lib;fmodL_vc.lib;glfw3.lib;freetype.lib;assimp-vc141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Debug\fmodL.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\$(Configuration)\freetype.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Debug\assimp-vc141-mtd.dll" "$(ProjectDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>lua5.3.5-static.lib;fmodL_vc.lib;glfw3.lib;freetype.lib;assimp-vc141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Debug\fmodL.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\$(Configuration)\freetype.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Debug\assimp-vc141-mtd.dll" "$(ProjectDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>lua5.3.5-static.lib;fmod_vc.lib;glfw3.lib;freetype.lib;assimp-vc141-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Release\fmod.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\$(Configuration)\freetype.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Release\assimp-vc141-mt.dll" "$(ProjectDir)"</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>lua5.3.5-static.lib;fmod_vc.lib;glfw3.lib;freetype.lib;assimp-vc141-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Release\fmod.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\$(Configuration)\freetype.dll" "$(ProjectDir)"
+copy /Y "$(SolutionDir)exBuild\lib\$(PlatformShortName)\Release\assimp-vc141-mt.dll" "$(ProjectDir)"</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cActorManager.cpp" />
+    <ClCompile Include="cActorObject.cpp" />
+    <ClCompile Include="cAIBehaviours.cpp" />
+    <ClCompile Include="cAIManager.cpp" />
+    <ClCompile Include="cAnimationComponent.cpp" />
+    <ClCompile Include="cAnimationManager.cpp" />
+    <ClCompile Include="cAudioObject.cpp" />
+    <ClCompile Include="cAudioManager.cpp" />
+    <ClCompile Include="cBMPImage.cpp" />
+    <ClCompile Include="cCamera.cpp" />
+    <ClCompile Include="cCameraManager.cpp" />
+    <ClCompile Include="cCameraManager.hpp" />
+    <ClCompile Include="cCinemaCamera.cpp" />
+    <ClCompile Include="cCollisionListener.cpp" />
+    <ClCompile Include="cCommandGroup.cpp" />
+    <ClCompile Include="cCommandManager.cpp" />
+    <ClCompile Include="cComplexObject.cpp" />
+    <ClCompile Include="cCubemapTexture.cpp" />
+    <ClCompile Include="cError.cpp" />
+    <ClCompile Include="cErrorImp.cpp" />
+    <ClCompile Include="cFBO.cpp" />
+    <ClCompile Include="cFollow.cpp" />
+    <ClCompile Include="cFreeCamera.cpp" />
+    <ClCompile Include="cFSMState.cpp" />
+    <ClCompile Include="cFSMSystem.cpp" />
+    <ClCompile Include="cFuzzyLogicSystem.cpp" />
+    <ClCompile Include="cGatherState.cpp" />
+    <ClCompile Include="cGLColourHelper.cpp" />
+    <ClCompile Include="cIdleState.cpp" />
+    <ClCompile Include="cInstancedTransformComponent.cpp" />
+    <ClCompile Include="cLightHelper.cpp" />
+    <ClCompile Include="cLightManager.cpp" />
+    <ClCompile Include="cLowPassFilter.cpp" />
+    <ClCompile Include="cLuaManager.cpp" />
+    <ClCompile Include="cMediator.cpp" />
+    <ClCompile Include="cModelLoader_assimp.cpp" />
+    <ClCompile Include="cModelManager.cpp" />
+    <ClCompile Include="cModelObject.cpp" />
+    <ClCompile Include="cFileManager.cpp" />
+    <ClCompile Include="cCallbacks.cpp" />
+    <ClCompile Include="cGameObjectFactory.cpp" />
+    <ClCompile Include="cKeyBindings.cpp" />
+    <ClCompile Include="cLightObject.cpp" />
+    <ClCompile Include="cModelLoader.cpp" />
+    <ClCompile Include="cMouseBindings.cpp" />
+    <ClCompile Include="cMove.cpp" />
+    <ClCompile Include="cParticleSystemComponent.cpp" />
+    <ClCompile Include="cPhysics.cpp" />
+    <ClCompile Include="cPhysicsDebugRenderer.cpp" />
+    <ClCompile Include="cPhysicsManager.cpp" />
+    <ClCompile Include="cPhysics_Ericson.cpp" />
+    <ClCompile Include="cRenderer.cpp" />
+    <ClCompile Include="cResourceManager.cpp" />
+    <ClCompile Include="cRotate.cpp" />
+    <ClCompile Include="cScale.cpp" />
+    <ClCompile Include="cSearchState.cpp" />
+    <ClCompile Include="cGLSLShaderProgram.cpp" />
+    <ClCompile Include="cGLSLShaderManager.cpp" />
+    <ClCompile Include="cObjectCamera.cpp" />
+    <ClCompile Include="cState.cpp" />
+    <ClCompile Include="cTextRenderer.cpp" />
+    <ClCompile Include="cTexture.cpp" />
+    <ClCompile Include="cTextureBlend.cpp" />
+    <ClCompile Include="cTextureManager.cpp" />
+    <ClCompile Include="cTextureSwap.cpp" />
+    <ClCompile Include="cThreadSys.cpp" />
+    <ClCompile Include="cTransformComponent.cpp" />
+    <ClCompile Include="cTrigger.cpp" />
+    <ClCompile Include="cVAOManager.cpp" />
+    <ClCompile Include="cWorkerThreads.cpp" />
+    <ClCompile Include="DebugRenderer\cDebugRenderer.cpp" />
+    <ClCompile Include="DebugRenderer\cDebugRenderer_BuiltInShapes.cpp" />
+    <ClCompile Include="DebugRenderer\CErrorLog.cpp" />
+    <ClCompile Include="DebugRenderer\cGLRenderStateHelper.cpp" />
+    <ClCompile Include="DebugRenderer\COpenGLError.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="cLookAt.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="nAI.cpp" />
+    <ClCompile Include="cReturnState.cpp" />
+    <ClCompile Include="sData.cpp" />
+    <ClCompile Include="sStateComponent.cpp" />
+    <ClCompile Include="stb.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cAnimationComponent.hpp" />
+    <ClInclude Include="cAnimationManager.hpp" />
+    <ClInclude Include="cActorManager.hpp" />
+    <ClInclude Include="cActorObject.hpp" />
+    <ClInclude Include="cAIBehaviours.hpp" />
+    <ClInclude Include="cAIManager.hpp" />
+    <ClInclude Include="cAABB.hpp" />
+    <ClInclude Include="cAudioObject.hpp" />
+    <ClInclude Include="cAudioManager.hpp" />
+    <ClInclude Include="cCallbacks.hpp" />
+    <ClInclude Include="cCamera.hpp" />
+    <ClInclude Include="cCinemaCamera.hpp" />
+    <ClInclude Include="cCollisionListener.hpp" />
+    <ClInclude Include="cCommandGroup.hpp" />
+    <ClInclude Include="cCommandManager.hpp" />
+    <ClInclude Include="cComplexObject.hpp" />
+    <ClInclude Include="cCubemapTexture.hpp" />
+    <ClInclude Include="cFuzzyLogicSystem.hpp" />
+    <ClInclude Include="cPhysicsDebugRenderer.hpp" />
+    <ClInclude Include="cError.hpp" />
+    <ClInclude Include="cErrorImp.hpp" />
+    <ClInclude Include="cFBO.hpp" />
+    <ClInclude Include="cFollow.hpp" />
+    <ClInclude Include="cFreeCamera.hpp" />
+    <ClInclude Include="cFSMState.hpp" />
+    <ClInclude Include="cFSMSystem.hpp" />
+    <ClInclude Include="cGatherState.hpp" />
+    <ClInclude Include="cGLColourHelper.hpp" />
+    <ClInclude Include="cJobQueue.hpp" />
+    <ClInclude Include="cGLSLShaderProgram.hpp" />
+    <ClInclude Include="cHelpingFunctions.hpp" />
+    <ClInclude Include="cInstancedTransformComponent.hpp" />
+    <ClInclude Include="cLightHelper.hpp" />
+    <ClInclude Include="cLightManager.hpp" />
+    <ClInclude Include="cLowPassFilter.hpp" />
+    <ClInclude Include="cLuaManager.hpp" />
+    <ClInclude Include="cMediator.hpp" />
+    <ClInclude Include="cModelManager.hpp" />
+    <ClInclude Include="cModelObject.hpp" />
+    <ClInclude Include="cFileManager.hpp" />
+    <ClInclude Include="cLightObject.hpp" />
+    <ClInclude Include="cMesh.hpp" />
+    <ClInclude Include="cModelLoader.hpp" />
+    <ClInclude Include="cMove.hpp" />
+    <ClInclude Include="cParticleSystemComponent.hpp" />
+    <ClInclude Include="cPhysics.hpp" />
+    <ClInclude Include="cPhysicsManager.hpp" />
+    <ClInclude Include="cRenderer.hpp" />
+    <ClInclude Include="cPhysicsObject.hpp" />
+    <ClInclude Include="cResourceManager.hpp" />
+    <ClInclude Include="cReturnState.hpp" />
+    <ClInclude Include="cRotate.hpp" />
+    <ClInclude Include="cScale.hpp" />
+    <ClInclude Include="cGLSLShaderManager.hpp" />
+    <ClInclude Include="cObjectCamera.hpp" />
+    <ClInclude Include="cSkinnedMesh.hpp" />
+    <ClInclude Include="cTexture.hpp" />
+    <ClInclude Include="cTextureManager.hpp" />
+    <ClInclude Include="cState.hpp" />
+    <ClInclude Include="cTextRenderer.hpp" />
+    <ClInclude Include="cTextureBlend.hpp" />
+    <ClInclude Include="cTextureSwap.hpp" />
+    <ClInclude Include="cThreadPool.hpp" />
+    <ClInclude Include="cThreadSys.hpp" />
+    <ClInclude Include="cTransformComponent.hpp" />
+    <ClInclude Include="cTrigger.hpp" />
+    <ClInclude Include="cVAOManager.hpp" />
+    <ClInclude Include="cWorkerThreads.hpp" />
+    <ClInclude Include="DebugRenderer\cDebugRenderer.hpp" />
+    <ClInclude Include="DebugRenderer\cErrorLog.hpp" />
+    <ClInclude Include="DebugRenderer\cGLRenderStateHelper.hpp" />
+    <ClInclude Include="DebugRenderer\COpenGLError.hpp" />
+    <ClInclude Include="DebugRenderer\iDebugRenderer.hpp" />
+    <ClInclude Include="GLCommon.hpp" />
+    <ClInclude Include="Globals.hpp" />
+    <ClInclude Include="cGameObjectFactory.hpp" />
+    <ClInclude Include="iAudioListener.hpp" />
+    <ClInclude Include="iCommand.hpp" />
+    <ClInclude Include="cIdleState.hpp" />
+    <ClInclude Include="iGameObject.hpp" />
+    <ClInclude Include="iMediatorInterface.hpp" />
+    <ClInclude Include="cLookAt.hpp" />
+    <ClInclude Include="jsonUtility.hpp" />
+    <ClInclude Include="MapInfo.hpp" />
+    <ClInclude Include="MediatorGlobals.hpp" />
+    <ClInclude Include="nAI.hpp" />
+    <ClInclude Include="nAIEnums.hpp" />
+    <ClInclude Include="nConvert.hpp" />
+    <ClInclude Include="sData.hpp" />
+    <ClInclude Include="nDecisionTree.hpp" />
+    <ClInclude Include="cSearchState.hpp" />
+    <ClInclude Include="sModelDrawInfo.hpp" />
+    <ClInclude Include="sStateComponent.hpp" />
+    <ClInclude Include="sVertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\config\actors\actors.ini" />
+    <None Include="data\config\audio\audio.ini" />
+    <None Include="data\config\complex\complex.ini" />
+    <None Include="data\config\complex\Entities.json" />
+    <None Include="data\config\lights\lights.ini" />
+    <None Include="data\config\models\meshes.ini" />
+    <None Include="data\config\models\models.ini" />
+    <None Include="data\config\physics\physics.ini" />
+    <None Include="data\config\physics\PhysicsLibraries.json" />
+    <None Include="data\config\scripts\lua\animascripts.ini" />
+    <None Include="data\config\shaders\shaders.ini" />
+    <None Include="data\config\textures\default_skybox_textures.ini" />
+    <None Include="data\config\textures\default_textures.ini" />
+    <None Include="data\config\textures\skybox_textures.ini" />
+    <None Include="data\config\textures\textures.ini" />
+    <None Include="data\shaders\fragmentShader01.glsl" />
+    <None Include="data\shaders\geometryShader01.glsl" />
+    <None Include="data\shaders\textfragshader01.glsl" />
+    <None Include="data\shaders\textvertexshader01.glsl" />
+    <None Include="data\shaders\vertexShader01.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\scripts\lua\luaAnimaScript.txt" />
+    <Text Include="data\scripts\lua\luaCameraTest.txt" />
+    <Text Include="data\scripts\lua\luaTestFollowCurve.txt" />
+    <Text Include="data\scripts\lua\luaTestFollowObject.txt" />
+    <Text Include="data\scripts\lua\luaTestRotate.txt" />
+    <Text Include="data\scripts\lua\luaTestScript.txt" />
+    <Text Include="data\scripts\lua\luaTestScriptParallel.txt" />
+    <Text Include="data\scripts\lua\luaTestScriptSerial.txt" />
+    <Text Include="data\scripts\lua\luaTestTrigger.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
